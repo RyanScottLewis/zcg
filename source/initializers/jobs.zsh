@@ -1,0 +1,1 @@
+setopt long_list_jobs

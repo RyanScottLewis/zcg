@@ -1,0 +1,1 @@
+export EXPLORER="ranger-cd"

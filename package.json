@@ -1,0 +1,9 @@
+{
+  "private": true,
+  "dependencies": {
+    "metalsmith": "^2.3.0",
+    "metalsmith-concat": "^6.0.0",
+    "metalsmith-metadata": "0.0.4",
+    "underscore.string": "^3.3.4"
+  }
+}
