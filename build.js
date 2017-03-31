@@ -72,7 +72,7 @@ function commentFilename(options){
       var output = '';
       output += '# ' + prefix + ' ';
       output += name + ' ';
-      output = rpad(output, 100, options.char);
+      output = rpad(output, 80, options.char);
       output += '\n' + input;
 
       data.contents = Buffer.from(output);
