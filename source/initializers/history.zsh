@@ -1,6 +1,6 @@
 ## Command history configuration
 if [ -z "$HISTFILE" ]; then
-	HISTFILE=$ZDOTDIR/history
+	HISTFILE="$HOME/.local/share/zsh/history"
 fi
 
 # Initialize history file
