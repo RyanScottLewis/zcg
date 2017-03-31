@@ -53,6 +53,7 @@ All other files are copied directly to the build directory.
 
 You can configure the build within the `config.json` file.
 
-| Key           | Description    |
-|---------------|----------------|
-| `destination` | The build path |
+| Key           | Description                      | Default     |
+|---------------|----------------------------------|-------------|
+| `destination` | The build path                   | `./build`   |
+| `filename`    | The concatenated build file name | `./zcg.zsh` |

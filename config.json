@@ -1,3 +1,4 @@
 {
-  "destination": "./build"
+  "destination": "./build",
+  "filename": "zcg.zsh"
 }

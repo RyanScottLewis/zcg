@@ -4,8 +4,10 @@ const rpad = require("underscore.string/rpad");
 const path = require("path");
 
 const defaults = {
-  destination: './build'
+  destination: './build',
+  filename: 'zcg.zsh'
 }
+// TODO: Check if config file exists
 const config = Object.assign(defaults, require('./config.json'));
 
 Metalsmith(__dirname)
@@ -48,7 +50,7 @@ Metalsmith(__dirname)
   }))
   .use(concat({
     files:  '*',
-    output: 'zcg.zsh'
+    output: config.filename
   }))
   .build(function(err, files) {
     if (err) { throw err; }
