@@ -1,4 +1,4 @@
-if [ "$HOSTNAME" = "RyMacMini.local" ]; then
+if [ "$HOST" = "RyMacMini.local" ]; then
   export MEDIA_PATH='/Volumes/Media'
 else
   export MEDIA_PATH='/mnt/Media'
