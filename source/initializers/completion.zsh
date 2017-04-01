@@ -1,5 +1,3 @@
-autoload -U compaudit compinit
-
 unsetopt menu_complete   # do not autoselect the first completion entry
 unsetopt flowcontrol
 setopt auto_menu         # show completion menu on succesive tab press
@@ -76,14 +74,5 @@ if [ -z "$ZSH_COMPDUMP" ]; then
   ZSH_COMPDUMP="${ZDOTDIR:-${HOME}}/.zcompdump-${SHORT_HOST}-${ZSH_VERSION}"
 fi
 
-
-if [[ $ZSH_DISABLE_COMPFIX != true ]]; then
-  # If completion insecurities exist, warn the user without enabling completions.
-  if ! compaudit &>/dev/null; then
-    handle_completion_insecurities
-  else
-    compinit -d "${ZSH_COMPDUMP}"
-  fi
-else
-  compinit -i -d "${ZSH_COMPDUMP}"
-fi
+# Add custom completions to the fpath
+fpath=(/etc/zsh/completions $fpath)
