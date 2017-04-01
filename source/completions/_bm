@@ -1,0 +1,17 @@
+#compdef bm
+
+local curcontext="$curcontext" state line ret=1
+typeset -A opt_args
+
+_arguments -C \
+  "1: :->args" && ret=0
+
+case $state in
+  args)
+    _values 'bookmarks' `bmls` && ret=0
+    ;;
+esac
+
+return ret
+
+# vim: ft=zsh sw=2 ts=2 et
