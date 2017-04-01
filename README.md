@@ -18,26 +18,12 @@ Place your configuration files into their respective directories under the `sour
 PROJECT_NAME/
   source/
     exports/
-      my_export.zsh
-      ...
     initializers/
-      my_initializer.zsh
-      ...
     functions/
-      my_function.zsh
-      ...
     widgets/
-      my_widget.zsh
-      ...
     bindings/
-      my_binding.zsh
-      ...
     aliases/
-      my_alias.zsh
-      ...
     finalizers/
-      my_finalizer.zsh
-      ...
 ```
 
 Now generate the configuration file to `build/zcg.conf`:
