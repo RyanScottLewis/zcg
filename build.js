@@ -13,7 +13,6 @@ const config = Object.assign(defaults, require('./config.json'));
 Metalsmith(__dirname)
   .source('./source')
   .destination(defaults.destination)
-  // .clean(false)
   .use(commentFilename({
     char: '-'
   }))
@@ -60,22 +59,26 @@ Metalsmith(__dirname)
 function commentFilename(options){
   return function (files, metalsmith, done) {
 
+    var regex = /^(exports|initializers|functions|widgets|bindings|aliases|finalizers)/;
+
     setImmediate(done);
 
     Object.keys(files).forEach(function(file){
-      var data = files[file];
-      var input = String(data.contents);
+      if (regex.test(file)) {
+        var data = files[file];
+        var input = String(data.contents);
 
-      var prefix = options.char.repeat(2);
-      var name = path.basename(file, path.extname(file));
+        var prefix = options.char.repeat(2);
+        var name = path.basename(file, path.extname(file));
 
-      var output = '';
-      output += '# ' + prefix + ' ';
-      output += name + ' ';
-      output = rpad(output, 80, options.char);
-      output += '\n' + input;
+        var output = '';
+        output += '# ' + prefix + ' ';
+        output += name + ' ';
+        output = rpad(output, 80, options.char);
+        output += '\n' + input;
 
-      data.contents = Buffer.from(output);
+        data.contents = Buffer.from(output);
+      }
     });
 
   };
