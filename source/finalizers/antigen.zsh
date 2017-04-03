@@ -1,4 +1,4 @@
-source "$HOME/.config/zsh/antigen/antigen.zsh" # TODO: Auto clone antigen unless it exists.. update? I unno
+source "/usr/share/zsh/share/antigen.zsh" # TODO: Auto clone antigen unless it exists.. update? I unno
 
 antigen bundle zsh-users/zsh-syntax-highlighting
 antigen bundle zsh-users/zsh-completions

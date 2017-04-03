@@ -1,1 +1,1 @@
-ADOTDIR="$HOME/.config/zsh/antigen.d"
+ADOTDIR="/etc/zsh/antigen"
