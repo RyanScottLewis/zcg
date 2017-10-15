@@ -1,4 +1,8 @@
-source "/usr/share/zsh/share/antigen.zsh" # TODO: Auto clone antigen unless it exists.. update? I unno
+if [[ `uname` == 'Darwin' ]]; then
+  source /usr/local/share/antigen/antigen.zsh
+else
+  source /usr/share/zsh/share/antigen.zsh
+fi
 
 antigen bundle zsh-users/zsh-syntax-highlighting
 antigen bundle zsh-users/zsh-completions
