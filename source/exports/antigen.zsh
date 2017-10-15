@@ -1,1 +1,0 @@
-ADOTDIR="/etc/zsh/antigen"
