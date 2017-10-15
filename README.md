@@ -12,7 +12,7 @@ npm install
 
 ## Usage
 
-Place your configuration files into their respective directories under the `source/` directory:
+Place your ZSH configuration files into their respective directories under the `source/` directory:
 
 ```
 PROJECT_NAME/
@@ -32,14 +32,19 @@ Now generate the configuration file to `build/zcg.conf`:
 node build
 ```
 
-The files are concatenated in the order listed above.  
-All other files are copied directly to the build directory.
+## Configuration
 
-### Configure
+You can configure the build within the `build.js` file.
 
-You can configure the build within the `config.json` file.
+### Output File
 
-| Key           | Description                      | Default   |
-|---------------|----------------------------------|-----------|
-| `destination` | The build path                   | `./build` |
-| `filename`    | The concatenated build file name | `zcg.zsh` |
+| Key           | Description                                    | Default         |
+|---------------|------------------------------------------------|-----------------|
+| `source`      | The directory containing the group directories | `./source`      |
+| `destination` | The output file path                           | `./build/zshrc` |
+| `groups`      | The list of group names                        | See below       |
+
+The group names listed in the Usage section is the default. The names and order of these groups are arbitrary.
+
+In the order listed, each file within the groups directory (within the `source` directory) is concatenated together to
+generate the final file.

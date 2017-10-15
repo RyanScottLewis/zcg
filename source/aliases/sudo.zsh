@@ -1,2 +1,2 @@
-# Allow wudo to use aliases (for some reason)
+# Allow sudo to use aliases (for some reason)
 alias sudo="sudo "
