@@ -1,1 +1,2 @@
-bindkey -s "\C-E" "^q$EDITOR\n"   # [Ctrl-E] - Open editor
+# [Ctrl-E] - Open editor
+bindkey -s "\C-E" "^q$EDITOR\n"

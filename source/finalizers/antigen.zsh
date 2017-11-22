@@ -1,9 +1,11 @@
+# Setup Antigen Zsh plugin manager
 if [[ `uname` == 'Darwin' ]]; then
   source /usr/local/share/antigen/antigen.zsh
 else
   source /usr/share/zsh/share/antigen.zsh
 fi
 
+# List of plugins
 antigen bundle zsh-users/zsh-syntax-highlighting
 antigen bundle zsh-users/zsh-completions
 antigen bundle zsh-users/zsh-history-substring-search
@@ -13,4 +15,5 @@ antigen bundle Tarrasch/zsh-command-not-found
 antigen bundle veelenga/crystal-zsh
 antigen bundle b4b4r07/enhancd
 
+# Install/setup plugins
 antigen apply
