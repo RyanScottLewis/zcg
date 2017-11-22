@@ -1,8 +1,10 @@
-# TODO: Check for vimpager first
-export PAGER=$(which vimpager)
+# Find and set the default pager
+# Override in an initializer or at the end of this file
+pagers=('vimpager' 'more' 'less')
 
-# Pager # TODO
-# export PAGER=$(which nvim)
-#
-# alias less=$PAGER
-# alias zless=$PAGER
+for command in $pagers; do
+  if [[ (( $+commands[$command] )) ]]; then
+    export PAGER=$(which $command)
+    break
+  fi
+done
