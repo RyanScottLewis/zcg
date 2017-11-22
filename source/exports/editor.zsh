@@ -3,7 +3,7 @@
 editors=('nvim' 'vim' 'vi' 'emacs' 'nano' 'ed')
 
 for command in $editors; do
-  if [[ (( $+commands[$command] )) ]]; then
+  if (( $+commands[$command] )); then
     export EDITOR=$(which $command)
     break
   fi
