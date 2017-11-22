@@ -32,6 +32,12 @@ Now generate the configuration file to `build/zcg.conf`:
 node build
 ```
 
+Install to your system (`/etc/zsh/zshrc`) with:
+
+```sh
+sudo node build config/system.json
+```
+
 ## Configuration
 
 You can configure the build within the `build.js` file.
