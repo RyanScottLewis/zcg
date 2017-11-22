@@ -1,6 +1,9 @@
-unamestr=`uname`
-if [[ "$unamestr" == 'Linux' ]]; then
+UNAME=`uname`
+
+if [[ "$UNAME_STR" == 'Linux' ]]; then
   alias l="ls -al --color=auto"
-elif [[ "$unamestr" == 'Darwin' || "$unamestr" == 'FreeBSD' ]]; then
+elif [[ "$UNAME_STR" == 'Darwin' || "$UNAME_STR" == 'FreeBSD' ]]; then
   alias l="ls -alG"
 fi
+
+unset UNAME_STR
